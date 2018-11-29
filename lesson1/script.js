@@ -76,12 +76,12 @@ else {
 // while (num < 55);
 
 
-// for (let i = 3; i < 12; i++) {
-//     if (i%3 == 1 && i%3 == 2) {
-//         continue;
-//     }
-//     console.log(i);
-// }
+for (let i = 3; i < 12; i++) {
+    if (i%3 == 1 && i%3 == 2) {
+        continue;
+    }
+    console.log(i);
+}
 
 
 // let x = 13;
@@ -95,11 +95,6 @@ else {
 
 /* let y = 1; let x = y = 2; alert(x);
  */
-
-
-1234 || null && 8461535 || 3652262
-NaN || undefined && NaN || undefined
-undefined && 456789 || 1516 || 665666 || 0
 
 
 /* 1234 && 5678
