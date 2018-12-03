@@ -87,24 +87,24 @@ NaN || null
 
 // L E S S O N    F U N C T I O N
 
-function showText(text) {
-    let num = 40;
-    console.log(num);
-    console.log(text);
-}
-let num = 10;
-showText('Привет, Мир!');
-console.log(num);
+// function showText(text) {
+//     let num = 40;
+//     console.log(num);
+//     console.log(text);
+// }
+// let num = 10;
+// showText('Привет, Мир!');
+// console.log(num);
 
-// Function Declaration
+// // Function Declaration
 
-function calc(a, b, c, d) {
-    return ((a + b) * c % d);
-}
+// function calc(a, b, c, d) {
+//     return ((a + b) * c % d);
+// }
 
-console.log(calc.length);
-console.log(calc(1, 2, 3, 4));
-console.log(calc(1645534, 354135412, 35454, 353468434));
+// console.log(calc.length);
+// console.log(calc(1, 2, 3, 4));
+// console.log(calc(1645534, 354135412, 35454, 353468434));
 
 // Function Expression
 
@@ -125,38 +125,88 @@ console.log(calc(1645534, 354135412, 35454, 353468434));
 
 
 
-function returnVar() {
-    let num = 50;
-    return num;
+// function returnVar() {
+//     let num = 50;
+//     return num;
+// }
+
+// let anotherNum = returnVar();
+// console.log(anotherNum);
+
+
+// // Свойства - это вспомогательные значения
+
+// let str = 'Индексация изменённых файлов';
+// console.log(str.length);
+
+// let numb = 14.5;
+// console.log(Math.round(numb));
+
+
+// // 
+// let val = '26.78px';
+// console.log(parseInt(val));
+// console.log(parseFloat(val));
+
+
+// // Методы - это вспомогательные функции
+
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+// console.log(numb.toFixed(3));
+
+
+// // 
+// let a = ["b", "c", 1, 2, 3, 4];
+// console.log(a.length);
+// console.log(a[1]);
+
+
+// function first() {
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 1000);
+// }
+
+// function second() {
+//     console.log(2);
+// }
+
+// first();
+// second();
+
+
+// // callback
+
+// function learnJS(lang, callback) {
+//     console.log('Я учу ' + lang);
+//     callback();
+// }
+
+// function done() {
+//     console.log('Я прошёл 3-й урок!');
+// }
+
+// learnJS('JavaScript', done);
+
+
+
+// Objects
+
+let vegetableColors = {
+    carrot: 'orange',
+    cucumber: 'green',
+    tomato: 'red' 
+};
+
+console.log(vegetableColors.tomato);
+
+vegetableColors.onion = 'violet';
+
+delete vegetableColors.cucumber;
+
+console.log(vegetableColors);
+
+for (let key in vegetableColors) {
+    console.log(key + ' has an ' + vegetableColors[key] + ' color');
 }
-
-let anotherNum = returnVar();
-console.log(anotherNum);
-
-
-// Свойства - это вспомогательные значения
-
-let str = 'Индексация изменённых файлов';
-console.log(str.length);
-
-let numb = 14.5;
-console.log(Math.round(numb));
-
-
-// 
-let val = '26.78px';
-console.log(parseInt(val));
-console.log(parseFloat(val));
-
-
-// Методы - это вспомогательные функции
-
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-console.log(numb.toFixed(3));
-
-
-// 
-let a = ["b", "c", 1, 2, 3, 4];
-console.log(a.length);
-console.log(a[1]);
