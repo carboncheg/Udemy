@@ -39,6 +39,24 @@ else {
 }; */
 
 
+// let num3 = +prompt('Введите число: ', '0');
+ 
+// switch (true) {
+//     case num3 > 50 && num3 > 100:
+//         alert(num3 + ' больше 50 и 100');
+//         break;
+//     case num3 > 50 && num3 < 100:
+//         alert(num3 + ' больше 50, но меньше 100');
+//         break;
+//     case num3 < 50 && num3 < 100:
+//         alert(num3 + ' меньше 50 и 100');
+//         break;
+//     default:
+//         alert('Введите число');
+//         break;
+// };
+
+
 
 // let num = 50;
 // /* while (num < 55) {
@@ -193,20 +211,45 @@ NaN || null
 
 // Objects
 
-let vegetableColors = {
-    carrot: 'orange',
-    cucumber: 'green',
-    tomato: 'red' 
-};
+// let vegetableColors = {
+//     carrot: 'orange',
+//     cucumber: 'green',
+//     tomato: 'red' 
+// };
 
-console.log(vegetableColors.tomato);
+// console.log(vegetableColors.tomato);
 
-vegetableColors.onion = 'violet';
+// vegetableColors.onion = 'violet';
 
-delete vegetableColors.cucumber;
+// delete vegetableColors.cucumber;
 
-console.log(vegetableColors);
+// console.log(vegetableColors);
 
-for (let key in vegetableColors) {
-    console.log(key + ' has an ' + vegetableColors[key] + ' color');
-}
+// for (let key in vegetableColors) {
+//     console.log(key + ' has an ' + vegetableColors[key] + ' color');
+// }
+
+
+// Arrays
+
+// let arr = [1, 'хлеб', 3.14, 'JS', '$'];
+// arr[10] = 10;
+// console.log(arr);
+// console.log(arr.length);
+
+let pos = 1, n = 2
+let arr = [1, 'хлеб', 3.14, 'JS', '$']
+// arr.pop();
+// arr.push(6623, 'bubble', '1235862');
+// arr.shift();
+// arr.unshift(123, 'grass', '5586525');
+console.log(arr.splice(pos, n));
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// let arr = [1, 'хлеб', 3.14, 'JS', '$'];
+// arr.forEach(function(item, i, mass) {
+//     console.log(i + ' : ' + item + "(массив: " + mass + ')');
+// });
