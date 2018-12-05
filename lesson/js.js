@@ -237,13 +237,11 @@ NaN || null
 // console.log(arr);
 // console.log(arr.length);
 
-let pos = 1, n = 2
-let arr = [1, 'хлеб', 3.14, 'JS', '$']
+// let arr = [1, 'хлеб', 3.14, 'JS', '$']
 // arr.pop();
 // arr.push(6623, 'bubble', '1235862');
 // arr.shift();
 // arr.unshift(123, 'grass', '5586525');
-console.log(arr.splice(pos, n));
 
 // for (let i = 0; i < arr.length; i++) {
 //     console.log(arr[i]);
@@ -253,3 +251,68 @@ console.log(arr.splice(pos, n));
 // arr.forEach(function(item, i, mass) {
 //     console.log(i + ' : ' + item + "(массив: " + mass + ')');
 // });
+
+
+// let mass = [23, 165, 52, 2565, 125, 99466]
+// let massive = mass.splice(2);
+// console.log(mass);
+
+
+// let mass = [23, 165, 52, 2565, 125, 99466]
+// for (let key of mass) {
+//      console.log(key);
+// }
+
+
+   // Создание массива из списка
+
+// let ans = prompt(''),
+//     arr = [];
+
+// arr = ans.split(',');
+// console.log(arr);
+
+
+   // Создание списка из массива
+
+// let arr = ['adfsv', 'efwR', 'SGVwr', 'KIULUJHY', 'WQERWETYTR'],
+//     i = arr.join(' | ');
+
+// console.log(i);
+
+
+   // Сортировка массива по алфавиту
+
+// let arr = ['adfsv', 'efwR', 'SGVwr', 'KIULUJHY', 'WQERWETYTR'],
+//    i = arr.sort();
+
+// console.log(i);
+
+
+   //Сортировка чисел по возрастанию
+
+// let arr = [350, 35, 1567, 9],
+//    i = arr.sort(compareNum);
+
+// function compareNum(a,b) {
+//     return a-b;
+// }
+
+// console.log(i);
+
+
+    //  ООП
+
+let car = {
+    color: 'white',
+    type: 'sedan'
+};
+
+let Mersedes = {
+    type: 'sedan'
+};
+
+Mersedes.__proto__ = car;
+
+console.log(Mersedes);
+console.log(Mersedes.color);
