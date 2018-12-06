@@ -211,11 +211,11 @@ NaN || null
 
 // Objects
 
-// let vegetableColors = {
-//     carrot: 'orange',
-//     cucumber: 'green',
-//     tomato: 'red' 
-// };
+let vegetableColors = {
+    carrot: 'orange',
+    cucumber: 'green',
+    tomato: 'red' 
+};
 
 // console.log(vegetableColors.tomato);
 
@@ -225,9 +225,9 @@ NaN || null
 
 // console.log(vegetableColors);
 
-// for (let key in vegetableColors) {
-//     console.log(key + ' has an ' + vegetableColors[key] + ' color');
-// }
+for (let key in vegetableColors) {
+    console.log(key + ' has an ' + vegetableColors[key] + ' color');
+}
 
 
 // Arrays
@@ -247,10 +247,10 @@ NaN || null
 //     console.log(arr[i]);
 // }
 
-// let arr = [1, 'хлеб', 3.14, 'JS', '$'];
-// arr.forEach(function(item, i, mass) {
-//     console.log(i + ' : ' + item + "(массив: " + mass + ')');
-// });
+let arr = [1, 'хлеб', 3.14, 'JS', '$'];
+arr.forEach(function(item, i, mass) {
+    console.log(i + ' : ' + item + "(массив: " + mass + ')');
+});
 
 
 // let mass = [23, 165, 52, 2565, 125, 99466]
