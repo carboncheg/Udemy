@@ -211,11 +211,11 @@ NaN || null
 
 // Objects
 
-let vegetableColors = {
-    carrot: 'orange',
-    cucumber: 'green',
-    tomato: 'red' 
-};
+// let vegetableColors = {
+//     carrot: 'orange',
+//     cucumber: 'green',
+//     tomato: 'red' 
+// };
 
 // console.log(vegetableColors.tomato);
 
@@ -225,9 +225,9 @@ let vegetableColors = {
 
 // console.log(vegetableColors);
 
-for (let key in vegetableColors) {
-    console.log(key + ' has an ' + vegetableColors[key] + ' color');
-}
+// for (let key in vegetableColors) {
+//     console.log(key + ' has an ' + vegetableColors[key] + ' color');
+// }
 
 
 // Arrays
@@ -247,10 +247,10 @@ for (let key in vegetableColors) {
 //     console.log(arr[i]);
 // }
 
-let arr = [1, 'хлеб', 3.14, 'JS', '$'];
-arr.forEach(function(item, i, mass) {
-    console.log(i + ' : ' + item + "(массив: " + mass + ')');
-});
+// let arr = [1, 'хлеб', 3.14, 'JS', '$'];
+// arr.forEach(function(item, i, mass) {
+//     console.log(i + ' : ' + item + "(массив: " + mass + ')');
+// });
 
 
 // let mass = [23, 165, 52, 2565, 125, 99466]
@@ -303,16 +303,98 @@ arr.forEach(function(item, i, mass) {
 
     //  ООП
 
-let car = {
-    color: 'white',
-    type: 'sedan'
-};
+// let car = {
+//     color: 'white',
+//     type: 'sedan'
+// };
 
-let Mersedes = {
-    type: 'sedan'
-};
+// let Mersedes = {
+//     type: 'sedan'
+// };
 
-Mersedes.__proto__ = car;
+// Mersedes.__proto__ = car;
 
-console.log(Mersedes);
-console.log(Mersedes.color);
+// console.log(Mersedes);
+// console.log(Mersedes.color);
+
+// var name = 'John Smith';
+// function showName() {
+//     console.log(this.name);
+// }
+
+// var user = {
+//     name: 'Ellen Simons',  
+//     showName: function() {  
+//         console.log(this.name);  
+//     }
+// }
+
+// showName();        // John Smith
+// window.showName(); // John Smith
+// user.showName();   // Ellen Simons
+
+
+// Получение элементов со страницы
+
+let box = document.getElementById('box'),
+    btn = document.getElementsByTagName('button'),
+    circle = document.getElementsByClassName("circle"),
+    heart = document.querySelectorAll('.heart'),
+    firstHeart = document.querySelector('.heart'),
+    nameHeart = document.getElementsByName('heart'),
+    wrapper = document.querySelector('.wrapper');
+
+
+// console.log(box);
+// console.log(btn);
+// console.log(btn[3]);
+// console.log(circle);
+// console.log(circle[2]);
+// console.log(heart);
+// console.log(heart[1]);
+// console.log(firstHeart);
+// console.log(heart[2]);
+
+box.style.backgroundColor = 'purple';
+box.style.color = '#fff';
+box.style.margin = '20px';
+btn[2].style.borderRadius = '50%';
+
+circle[0].style.backgroundColor = 'red';
+circle[1].style.backgroundColor = 'yellow';
+circle[2].style.backgroundColor = 'green';
+
+// цикл вместо повторного кода
+
+for (let i = 0; i < heart.length; i++) {
+    heart[i].style.backgroundColor = 'grey';
+}
+
+// перебор вместо повторного кода
+
+heart.forEach(function(item, i, hearts) {
+    item.style.backgroundColor = 'lightgreen';
+});
+
+let div = document.createElement('div'),
+    text = document.createTextNode('Этот текст был создан в JS');
+
+div.classList.add('black');
+
+// document.body.appendChild(div);
+// wrapper.appendChild(div);
+
+div.innerHTML = 'Hello World!';
+box.innerHTML = '<h2>Привет, Мир!</h2>';
+circle[1].textContent = 'Алоха, Мир!';
+
+
+document.body.insertBefore(div, btn[3]);
+document.body.removeChild(btn[3]);
+wrapper.removeChild(heart[0]);
+
+document.body.replaceChild(circle[1], btn[1]);
+
+
+console.log(div);
+console.log(text);
