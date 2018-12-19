@@ -336,13 +336,13 @@ NaN || null
 
 // Получение элементов со страницы
 
-let box = document.getElementById('box'),
-    btn = document.getElementsByTagName('button'),
-    circle = document.getElementsByClassName("circle"),
-    heart = document.querySelectorAll('.heart'),
-    firstHeart = document.querySelector('.heart'),
-    nameHeart = document.getElementsByName('heart'),
-    wrapper = document.querySelector('.wrapper');
+// let box = document.getElementById('box'),
+//     btn = document.getElementsByTagName('button'),
+//     circle = document.getElementsByClassName("circle"),
+//     heart = document.querySelectorAll('.heart'),
+//     firstHeart = document.querySelector('.heart'),
+//     nameHeart = document.getElementsByName('heart'),
+//     wrapper = document.querySelector('.wrapper');
 
 
 // console.log(box);
@@ -355,46 +355,107 @@ let box = document.getElementById('box'),
 // console.log(firstHeart);
 // console.log(heart[2]);
 
-box.style.backgroundColor = 'purple';
-box.style.color = '#fff';
-box.style.margin = '20px';
-btn[2].style.borderRadius = '50%';
+// box.style.backgroundColor = 'purple';
+// box.style.color = '#fff';
+// box.style.margin = '20px';
+// btn[2].style.borderRadius = '50%';
 
-circle[0].style.backgroundColor = 'red';
-circle[1].style.backgroundColor = 'yellow';
-circle[2].style.backgroundColor = 'green';
+// circle[0].style.backgroundColor = 'red';
+// circle[1].style.backgroundColor = 'yellow';
+// circle[2].style.backgroundColor = 'green';
 
-// цикл вместо повторного кода
+// // цикл вместо повторного кода
 
-for (let i = 0; i < heart.length; i++) {
-    heart[i].style.backgroundColor = 'grey';
-}
+// for (let i = 0; i < heart.length; i++) {
+//     heart[i].style.backgroundColor = 'grey';
+// }
 
-// перебор вместо повторного кода
+// // перебор вместо повторного кода
 
-heart.forEach(function(item, i, hearts) {
-    item.style.backgroundColor = 'lightgreen';
+// heart.forEach(function(item, i, hearts) {
+//     item.style.backgroundColor = 'lightgreen';
+// });
+
+// let div = document.createElement('div'),
+//     text = document.createTextNode('Этот текст был создан в JS');
+
+// div.classList.add('black');
+
+// // document.body.appendChild(div);
+// // wrapper.appendChild(div);
+
+// div.innerHTML = 'Hello World!';
+// box.innerHTML = '<h2>Привет, Мир!</h2>';
+// circle[1].textContent = 'Алоха, Мир!';
+
+
+// document.body.insertBefore(div, btn[3]);
+// document.body.removeChild(btn[3]);
+// wrapper.removeChild(heart[0]);
+
+// document.body.replaceChild(circle[1], btn[1]);
+
+
+// console.log(div);
+// console.log(text);
+
+
+
+let btn = document.querySelectorAll('button'),
+	wrap = document.querySelector('.wrapper'),
+	link = document.querySelector('a'),
+	submit = document.querySelector('input');
+
+// btn[0].onclick = function() {
+//     alert('На меня кликнули');
+// };
+
+// btn[0].onclick = function() {
+//     alert('На меня кликнули снова');
+// };
+
+// btn[0].addEventListener('click', function(event) {
+//     // let target = event.target;
+//     // target.style.display = 'none';
+//     // console.log(event);
+//     console.log('Произошло событие: ' + event.type + ' на элементе ' + event.target);
+// });
+
+// wrap.addEventListener('click', function() {
+// 	console.log('Произошло событие: ' + event.type + ' на элементе ' + event.target);
+// })
+
+link.style.color = 'yellow';
+submit.style.cursor = 'pointer';
+submit.style.backgroundColor = '#fff';
+
+link.addEventListener('click', function(event) {
+	event.preventDefault();				// Блокирует переход по ссылке
+	link.style.color = 'green';
+})
+
+btn.forEach(function(item) {
+	item.addEventListener('mouseover', function() {
+		btn[2].style.backgroundColor = '#222';
+	});
 });
 
-let div = document.createElement('div'),
-    text = document.createTextNode('Этот текст был создан в JS');
+// btn[0].addEventListener('click', function() {
+//     alert('gvhbnkhgh');
+// });
 
-div.classList.add('black');
+let wrapper = document.querySelector('.wrapper'),
+    circle = document.getElementsByClassName('circle'),
+    box = document.getElementById('box');
+    // wrapper.style.display = 'none';
+    circle[0].style.display = 'none';
+    circle[1].style.display = 'none';
+    circle[2].style.display = 'none';
+    box.style.display = 'none';
 
-// document.body.appendChild(div);
-// wrapper.appendChild(div);
-
-div.innerHTML = 'Hello World!';
-box.innerHTML = '<h2>Привет, Мир!</h2>';
-circle[1].textContent = 'Алоха, Мир!';
-
-
-document.body.insertBefore(div, btn[3]);
-document.body.removeChild(btn[3]);
-wrapper.removeChild(heart[0]);
-
-document.body.replaceChild(circle[1], btn[1]);
-
-
-console.log(div);
-console.log(text);
+// btn[3].addEventListener('mouseover', function() {
+//     console.log('что-то сделали');
+// });
+// btn[4].addEventListener('mouseover', function() {
+//     console.log('что-то сделали');
+// });
