@@ -39,13 +39,13 @@ let optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item');
 
 let incomeItem = document.querySelector('.choose-income'),
     checkSavings = document.querySelector('#savings'),
-    sumValue = document.querySelector('.choose-sum'),
+    sumValue = document.querySelector('#sum'),
     percentValue = document.querySelector('.choose-percent'),
     yearValue = document.querySelector('.year-value'),
     monthValue = document.querySelector('.month-value'),
     dayValue = document.querySelector('.day-value');
 
-// Начать рассчёт
+// Начать расчёт
 
 let money, time;
     
@@ -73,16 +73,18 @@ expensesBtn.addEventListener('click', function() {
         let a = expensesItem[i].value,
             b = expensesItem[++i].value;
     
-        if ((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+    // При использовании alert
+/*         if ((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
             && a != '' && b != '' && a.length < 50) {
-            console.log('Exp Done!');
+            console.log('Exp Done!'); */
             appData.expenses[a] = b;
             sum += +b;
-        } else {
+    // При использовании alert
+/*         } else {
             console.log('Bad result of Exp');
             i--;   // i = i - 1 
         }
-    }
+ */    }
     expensesValue.textContent = sum;
 });
 
