@@ -377,12 +377,12 @@ NaN || null
 // });
 
 // let div = document.createElement('div'),
-//     text = document.createTextNode('Этот текст был создан в JS');
+// //     text = document.createTextNode('Этот текст был создан в JS');
 
 // div.classList.add('black');
 
-// // document.body.appendChild(div);
-// // wrapper.appendChild(div);
+// document.body.appendChild(div);
+// wrapper.appendChild(div);
 
 // div.innerHTML = 'Hello World!';
 // box.innerHTML = '<h2>Привет, Мир!</h2>';
