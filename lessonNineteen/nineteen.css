@@ -25,3 +25,16 @@ button {
   cursor: pointer;
   font-size: 130%;
 }
+.square {
+  border: 5px solid #fff;
+  padding: 30px;
+  font: bold 30px Verdana;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
+}

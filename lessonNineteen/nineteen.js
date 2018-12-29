@@ -6,47 +6,47 @@ let body = document.querySelector('body');
 let btn = document.querySelector('.btn'),
     box = document.querySelector('.box');
 
-// function myAnimation() {
-//     let pos = 0;
+function myAnimation() {
+    let pos = 0;
 
-//     let timerId = setInterval(frame, 5);
-//     function frame() {
-//         if (pos == 300) {
-//             clearInterval(timerId);
-//         } else {
-//             pos++;
-//             box.style.top = pos + 'px';
-//             box.style.left = pos + 'px';
-//         }
-//     }
-// }
-
-// btn.addEventListener('click', myAnimation);
-
-
-function myAnima() {
-    let x = 0,
-        y = 0;
-
-    let timerId = setInterval(frame, 7);
+    let timerId = setInterval(frame, 10);
     function frame() {
-        if (y == 300) {
-            x++;
-            box.style.left = x + 'px';
-
+        if (pos == 300) {
+            clearInterval(timerId);
         } else {
-            y++;
-            box.style.top = y + 'px';
-
-            if (x == 300) {
-                y--;
-                box.style.top = y + 'px';
-            }
+            pos++;
+            box.style.top = pos + 'px';
+            box.style.left = pos + 'px';
         }
     }
 }
 
-btn.addEventListener('click', myAnima);
+btn.addEventListener('click', myAnimation);
+
+
+// function myAnima() {
+//     let x = 0,
+//         y = 0;
+
+//     let timerId = setInterval(frame, 7);
+//     function frame() {
+//         if (y == 300) {
+//             x++;
+//             box.style.left = x + 'px';
+
+//         } else {
+//             y++;
+//             box.style.top = y + 'px';
+
+//             if (x == 300) {
+//                 y--;
+//                 box.style.top = y + 'px';
+//             }
+//         }
+//     }
+// }
+
+// btn.addEventListener('click', myAnima);
 
 // let timerId = setTimeout(sayHello, 1000);
 // clearTimeout(timerId);
@@ -75,14 +75,14 @@ btn.addEventListener('click', myAnima);
 
 // Делегирование событий
 
-let btnBlock = document.querySelector('.btn-block'),
-    btns = document.getElementsByTagName('button');
+// let btnBlock = document.querySelector('.btn-block'),
+//     btns = document.getElementsByTagName('button');
 
-btnBlock.addEventListener('click', function(event) {
-    if (event.target && event.target.tagName == 'BUTTON') {
-        console.log('Done!');
-    }
-});
+// btnBlock.addEventListener('click', function(event) {
+//     if (event.target && event.target.tagName == 'BUTTON') {
+//         console.log('Done!');
+//     }
+// });
 
 // // let btnBlock = document.querySelector('.btn-block'),
 // //     btns = document.getElementsByTagName('button');
@@ -166,3 +166,36 @@ btnBlock.addEventListener('click', function(event) {
 //     divText.appendChild(document.createTextNode(textNode));
 
 
+// Управление табами
+
+let btnBlock = document.querySelector('.btn-block'),
+    btns = document.querySelectorAll('button'),
+    square = document.querySelectorAll('.square');
+
+function hideSquare(a) {
+    for (let i = a; i < square.length; i++) {
+        square[i].classList.remove('show');
+        square[i].classList.add('hide');
+    }
+}
+hideSquare(1);
+
+function showSquare(b) {
+    if (square[b].classList.contains('hide')) {
+        square[b].classList.remove('hide');
+        square[b].classList.add('show');
+    }
+}
+
+btnBlock.addEventListener('click', function(event) {
+    let target = event.target;
+    if (target && target.classList.contains('btns')) {
+        for (let i = 0; i <= btns.length; i++) {
+            if (target == btns[i+1]) {
+                hideSquare(0);
+                showSquare(i);
+                break;
+            }
+        }
+    }
+});
