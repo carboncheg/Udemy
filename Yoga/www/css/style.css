@@ -67,7 +67,7 @@ header {
   height: 60px;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 1.0);
   z-index: 10;
 }
 header ul {
@@ -652,7 +652,7 @@ header ul li:before {
 .overlay .popup-form {
   background: url(../img/modal.jpg) center no-repeat;
   background-size: cover;
-  padding: 35px 88px 50px 88px;
+  padding: 35px 88px 15px 88px;
   color: #fff;
 }
 .overlay .popup-form-header {
@@ -716,4 +716,9 @@ header ul li:before {
 }
 .overlay .popup-form__btn:hover {
   box-shadow: 0 0 10px #c78030;
+}
+.status {
+  text-align: center;
+  margin: 30px;
+  color: #fff;
 }

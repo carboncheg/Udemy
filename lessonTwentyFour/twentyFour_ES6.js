@@ -121,6 +121,28 @@ calcOrDouble(333);
 
 
 // Классы
+class Person {
+    constructor(name) {
+      this.name = name;
+    }
+  
+    sayName() {
+        console.log(`Person ${this.name} said his name`);
+    }
+
+    favouriteBook() {
+        console.log(`${this.name}'s favourite book is Holy Bible`);
+    }
+}
+  
+const john = new Person('John'),
+    isaak = new Person('Isaak');
+
+john.sayName();
+isaak.sayName();
+
+john.favouriteBook();
+isaak.favouriteBook();
 
 class Rectangle {
     constructor(height, width = 20) {
@@ -164,3 +186,9 @@ log(...numbers);
 let array = [1, 2, 3];
 
 console.log(...array);
+
+
+function it(...args) {
+    console.log(args);
+}
+it('Big Data', 'Machine Learning', 'Data Science');

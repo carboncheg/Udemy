@@ -147,4 +147,99 @@ window.addEventListener('DOMContentLoaded', function() {
     //     });
     // }
 
+
+    // Форма
+
+    let message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо! Мы скоро свяжемся с вами!',
+        failure: 'Что-то пошло не так...'
+    };
+
+    let form = document.querySelector('.main-form'),
+        input = form.getElementsByTagName('input'),
+        statusMessage = document.createElement('div');
+        statusMessage.classList.add('status');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        form.appendChild(statusMessage);
+
+        let request = new XMLHttpRequest();
+        request.open('POST', 'server.php');
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        // request.setRequestHeader('Content-Type', 'application/json; charset=utf-8'); // для отправки json-формата
+
+        let formData = new FormData(form);
+
+        // для отправки json-формата
+        // let obj = {};
+        // formData.forEach(function(value, key) {
+        //     obj[key] = value;
+        // });
+        // let json = JSON.stringify(obj);
+
+        // request.send(json);
+        request.send(formData);
+
+        request.addEventListener('readystatechange', function() {
+            if (request.readyState < 4) {
+                statusMessage.textContent = message.loading;
+            }
+            else if (request.readyState === 4 && request.status == 200) {
+                statusMessage.textContent = message.success;
+            }
+            else {
+                statusMessage.textContent = failure.loading;
+            }
+        });
+
+        // Очистка input'ов
+
+        for (let i = 0; i < input.length; i++) {
+            input[i].value = '';
+        }
+    });
+
+
+    // Контактная форма
+
+    let contactForm = document.querySelector('#form'),
+        contactInput = contactForm.getElementsByTagName('input'),
+        contactStatusMessage = document.createElement('div');
+        contactStatusMessage.classList.add('status');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        contactForm.appendChild(contactStatusMessage);
+
+        let contactRequest = new XMLHttpRequest();
+        contactRequest.open('POST', 'server.php');
+        contactRequest.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        
+        let contactFormData = new FormData(contactForm);
+
+        let obj = {};
+        contactFormData.forEach(function(value, key) {
+            obj[key] = value;
+        });
+        let json = JSON.stringify(obj);
+
+        contactRequest.send(json);
+
+        contactRequest.addEventListener('readystatechange', function() {
+            if (contactRequest.readyState < 4) {
+                contactStatusMessage.textContent = message.loading;
+            }
+            else if (contactRequest.readyState === 4 && contactRequest.status == 200) {
+                contactStatusMessage.textContent = message.success;
+            }
+            else {
+                contactStatusMessage.textContent = failure.loading;
+            }
+        });
+        for (let i = 0; i < contactInput.length; i++) {
+            contactInput[i].value = '';
+        }
+    });
 });
