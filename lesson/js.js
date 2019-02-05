@@ -434,11 +434,11 @@ link.addEventListener('click', function(event) {
 	link.style.color = 'green';
 })
 
-btn.forEach(function(item) {
-	item.addEventListener('mouseover', function() {
-		btn[2].style.backgroundColor = '#222';
-	});
-});
+// btn.forEach(function(item) {
+// 	item.addEventListener('mouseover', function() {
+// 		btn[2].style.backgroundColor = '#ccc';
+// 	});
+// });
 
 // btn[0].addEventListener('click', function() {
 //     alert('gvhbnkhgh');
@@ -459,3 +459,18 @@ let wrapper = document.querySelector('.wrapper'),
 // btn[4].addEventListener('mouseover', function() {
 //     console.log('что-то сделали');
 // });
+
+
+// jQuery
+
+$(document).ready(function() {
+
+    $('button:eq(3)').hover(function() {
+        $('img:eq(0)').hide();
+    });
+
+    $('button:eq(4)').mouseup(function() {
+        $(this).toggleClass('slow');
+    });
+
+});
